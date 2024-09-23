@@ -95,11 +95,11 @@ console.log(`El primero experimento de un numero grande es ${numeroGrande3},que 
 console.log(`El primero experimento de un numero grande es ${numeroGrande4},que NO es soportado por NUMBER, perdiendo precisión y su tipo de dato es :
  ${typeof (numeroGrande4)}`);
 
-numeroGrande3 = BigInt(123456789012345678901234567890);
+numeroGrande3 = BigInt(123456789012345678901234567890n);
 console.log(`El quinto  experimento de un numero grande es ${numeroGrande3},que ya fué convertido a BIGINT , y su tipo de dato es :
  ${typeof (numeroGrande3)}`);
 
-numeroGrande4 = BigInt(11234567890123456789012345678901234567890);
+numeroGrande4 = BigInt(11234567890123456789012345678901234567890n);
 console.log(`El sexto  experimento de un numero grande es ${numeroGrande4},que ya fué convertido a BIGINT , y su tipo de dato es :
  ${typeof (numeroGrande4)}`);
 
@@ -241,7 +241,7 @@ console.log(
 console.warn("--- Tipo de Dato FUNCTION (Función)")
 
 // Declaramos una funcion que nos permita recibir un paramento en este caso el nombre de la persona a saludar, y le enviamos un saludo, esta función la asignamos a una constante.
-const saludar =  function(nombre){return Hola, ${nombre}!}
+const saludar =  function(nombre){return `Hola, ${nombre}!`}
 
 // Invocamos a la función declarada
 console.log(saludar('Marco'));
