@@ -1,6 +1,6 @@
 // Tipos de datos en js
 
-// 1 Undefined
+// 1.-Undefined
 console.warn("---Tipo de Dato UNDEFINED")
 let cliente;
 console.log(`El cliente es : ${cliente}`);
@@ -18,7 +18,7 @@ console.log(`El tipo de dato de la variable cliente es: ${typeof (cliente)}`);
 
 //Undefined es el tipo de dato que por defecto se asigna a variables no inicializadas o no declaradas
 
-// 2. BOOLEAN - Boleanos -TRUE/FALSE (Flaso/Verdadero)
+// 2.-BOOLEAN - Boleanos -TRUE/FALSE (Flaso/Verdadero)
 console.warn("---Tipo de Dato : BOOLEAN (True/ False)")
 let esPremium = "No lo se";
 console.log(`¿Es el clientePremium? : ${esPremium}`)
@@ -41,7 +41,7 @@ if (esPremium)
 else
     console.log("El cliente recibe los servicios gratuitos");
 
-//3. Numbre
+//3.-Number
 
 var cantidad;
 const costo_producto = 10.50
@@ -61,7 +61,7 @@ console.log(`Tu nuevo saldo es de: ${saldo_cuenta}`);
 monto_transaccion = 1500;
 console.log(`Tu abono de: ${monto_transaccion} ha recibido, tu nuevo saldo es de: ${saldo_cuenta + monto_transaccion}`);
 
-// 4:String (cadena Caracteres)
+// 4.-String (cadena Caracteres)
 const alumno = "Brian jesus mendooza marquez"
 let producto;
 console.warn("---Tipo de Dato - String (Cadena de caracteres");
@@ -77,7 +77,7 @@ console.log(`Mas adelante podremos transformar el contenido de lo String usando 
  ${alumno}=>${alumno.toLowerCase()}`);
 console.log(`O ensu defecto a minusculas: ${producto.toLowerCase()}`);
 
-// 5. BIGIN (Numero de Mayor Aplitud)
+// 5.-BIGIN (Numero de Mayor Aplitud)
 
 console.warn("---Tipo de dato = Bigint (NUMERO AMPLIO");
 const numeroGrande = 1234567890
@@ -106,7 +106,7 @@ console.log(`El sexto  experimento de un numero grande es ${numeroGrande4},que y
 const numero = 129;
 console.log(`Intentando realizar la suma de: numero + numeroGrande3, si el resultado es: ${BigInt(numero) + numeroGrande3}`);
 
-//6. SYMBOL (simbolo)
+//6.-SYMBOL (simbolo)
 const numero1 = 5;
 const numero2 = 5.0;
 const numero3 = "5";
@@ -187,9 +187,7 @@ console.log(`¿Es 5 === Symbol("5.0")?, antes de compararlos analizamos que tipo
     else
         console.log("Se comparo numero1 con numero9, determinando que tienen el mismo valor, pero NO el mismo tipo de dato.")
 
-
-
-
+        
 // 10 prueba importante
 
 console.log(`¿Es Symbol(5) === Symbol(5)?, antes de compararlos analizamos que tipo de dato son: siendo numero1 del tipo: ${typeof(numero5)} y numero5 del tipo de dato: ${typeof(numero6)}`)
@@ -198,8 +196,9 @@ console.log(`¿Es Symbol(5) === Symbol(5)?, antes de compararlos analizamos que 
     else
         console.log("Se comparo numero5 con numero6, determinando que tienen el mismo valor y el mismo tipo de dato, es la condición de Symbol la que lo hace único en la memoria.")
 
-// 7. null
+// 7.-NULL
 console.warn("Tipo de dato - NULL (Nulo o Vacio");
+
 //El tipo de dato nulo se asigna cuando el sistema o el usuario saben de la variable pero prefieren dejarlo vacio, por su consentimiento, a diferencia de UNDEFIEND que es un valor desconocido asignado por default po JS
  
 let nombreUsuario= null;
@@ -208,13 +207,44 @@ let generoUsuario= null;
 let estatusRelacionSentimental= null;
 let fecha_ultimoPost= null;
 
-//Supongamos que estamos programando una red social, tipo Facebook , en la parte de la información se publicara en el eperfil del usuario 
-//Si el usuario no ha iniciado sesión en el disposiivo móvil o en la aplicaión web, puede explorar contenido de acceso publico, y noi existira informacion para mostar 
-//En la HU (Historia de Usuario), que el usuario desea logearse debvera ingresar su numero telefonico o correo electronico y una contraseal que deberemos guaradd en las variables previamente declaradas
+//Supongamos que estamos programando una red social, tipo Facebook , en la parte de la información se publicara en el perfil del usuario 
+//Si el usuario no ha iniciado sesión en el dispositivo móvil o en la aplicaión web, puede explorar contenido de acceso publico, y no existira información para mostrar 
+//En la HU (Historia de Usuario), que el usuario desea logearse debera ingresar su numero telefonico o correo electronico y una contraseal que deberemos guaradd en las variables previamente declaradas
 //Supongamos que el usuario: Dulce B. con correo electronico dulcebal@gmail.com desea ingresar con su contraseña: dulce123
  
 nombreUsuario="dulcebal@gmail.com";
 passUsuario="dulce123"
 //En este momento de ejecución del sistema no sabemos su genero, ni su estatus de relación sentimental 
 console.log(`El Usuario ${nombreUsuario} esta intentado logearse con una contraseña de: ${passUsuario}`);
-//Lo que prosigue es que el sistema contejara los datos ingresados con la base de datos y en caso de que los datos sean correctos comenzara la sesión en la plataforma actualizando estos valores
+//Lo que prosigue es que el sistema contejara los datos ingresados con la base de datos y en caso de que los datos sean correctos comenzara la sesión en la plataforma actualizando estos valores.
+//Dado que Dulce es del genero Femenino,y denota que su estatus de rlación no ha sido capturado o lo mantiene privado puede generar la actualiación de los valores de las variables
+generoUsuario="F"
+estatusRelacionSentimental=null
+
+console.log(`El Usuario ${nombreUsuario} se ha logeado exitosamete, al tener acceso a su información de perfil podemos deducir que es del genero ${generoUsuario} y que su estatus de realción es: ${estatusRelacionSentimental} y su ultima publicación se realizo el: ${fecha_ultimoPost}`);
+
+//Comparando NULL vs UNDEFINED
+//Si bien UNDEFINED y NULL tienen el mismo valor, no tienen el mismo tipo de dato
+console.log("Comparación de la aquidad entre Undefined y Null")
+console.log(
+    (fecha_ultimoPost == estatusRelacionSentimental) ?
+    "Ambas variables tienen el mismo valor":
+    "Las variables no tienen el mismo valor"
+);
+console.log("Comparación de la identidad entre Undefined y Null")
+console.log(
+    (fecha_ultimoPost === estatusRelacionSentimental) ?
+    "Ambas variables tienen el mismo valor y el mismo tipo de dato" :
+    "Las variables tienen el mismo valor, pero no el mismo tipo de dato"
+);
+// 8. FUNCTION (Funciones)
+console.warn("--- Tipo de Dato FUNCTION (Función)")
+
+// Declaramos una funcion que nos permita recibir un paramento en este caso el nombre de la persona a saludar, y le enviamos un saludo, esta función la asignamos a una constante.
+const saludar =  function(nombre){return Hola, ${nombre}!}
+
+// Invocamos a la función declarada
+console.log(saludar('Marco'));
+
+//Y que tipo de dato tiene esta constante
+console.log(`El tipo de dato de la constante saludar es: ${typeof(saludar)}`)
