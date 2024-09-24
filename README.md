@@ -3,7 +3,7 @@ Proyecto de clase para unidad 1 de la asignatura de Aplicaciones Web Orientadas 
 
 ## Descripcion
 
-previa a iniciar el desarrollo de software para web utilizando el framework de ModeJS, realizaremos un par de practicas de repaso en javascript pur, con el objetivo de confirmar los conosimientos basicos en logix¿ca de programacion.
+previa a iniciar el desarrollo de software para web utilizando el framework de ModeJS, realizaremos un par de practicas de repaso en javascript pur, con el objetivo de confirmar los conocimientos basicos en logica de programacion.
 
  ## Historial de Practicas 
 |No.|Descripcion|Estatus|
